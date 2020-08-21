@@ -7,17 +7,17 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>Create Next App</title>
+        <title>Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Main>
         <Title>
-          Twitter NextJS
+          NextJS App
         </Title>
 
         <Link href="/home-page/feed">
-          <Button>Ir para Feed</Button>
+          <Button>Trocar Página</Button>
         </Link>
 
       </Main>
@@ -26,8 +26,8 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  background: #121212;
 
   display: grid;
   grid-template-columns: 1fr 480px 1fr;
@@ -43,18 +43,23 @@ const Container = styled.div`
 
 const Main = styled.main`
   grid-area: login;
-  background: #7692FF;
+  background: #000;
   border-radius: 8px;
+  box-shadow: #000 2px 0px 10px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 40px;
 `;
 
 const Title = styled.h1`
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto;
   font-size: 40px;
+  color: #fff;
+  opacity: 85%;
+  margin-bottom: 150px;
 `;
 
 const Button = styled.button`
@@ -62,4 +67,9 @@ const Button = styled.button`
   height: 50px;
   border-radius: 8px;
   border: none;
+  background-color: #bb86fc;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
 `;
